@@ -1,12 +1,13 @@
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('message', (ev) => {
 
-    console.log('WINDOWS OPENER', window.opener)
+    if(ev.origin !== 'https://art-shop-f.onrender.com') return;
+    console.log('child receiving', ev.data)
 
-    if(window.opener){
-        window.opener.location = 'https://google.com'
+    if(ev.data.msg = 'do it now') {
+        if(window.opener) {
+            window.opener.postMessage({ from: 'child', msg: 'https://google.com'}, 'https://art-shop-f.onrender.com')
+        }
     }
-    
 })
-
 
