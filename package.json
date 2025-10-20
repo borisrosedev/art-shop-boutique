@@ -1,0 +1,16 @@
+{
+  "name": "art-shop-boutique",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --open --port 5174", 
+    "build": "vite build", 
+    "preview": "vite preview"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "vite": "^7.1.11"
+  }
+}
